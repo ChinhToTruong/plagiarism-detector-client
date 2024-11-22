@@ -22,9 +22,10 @@ import { NavLink } from 'react-router-dom'
 import Report from '../../pages/report';
 import ClassRoom from '../../pages/room';
 
+
 const nestedRoutesUser = [
-  {path: 'room', name: 'Class', destination: <ClassRoom /> },
-  { path: 'profile', name: 'Profile', destination: < Home/> },
+  { path: 'room', name: 'Class', destination: <ClassRoom /> },
+  { path: 'profile', name: 'Profile', destination: < Home /> },
   { path: 'report', exact: true, name: 'Report', destination: <Report /> },
 ]
 
@@ -151,10 +152,10 @@ export default function UserLayout() {
         <List>
           {nestedRoutesUser.map((router) => (
             <ListItem key={router.name} disablePadding>
-              <ListItemButton 
-              component={NavLink} 
-              to={router.path}
-              > 
+              <ListItemButton
+                component={NavLink}
+                to={router.path}
+              >
                 {router.name}
               </ListItemButton>
             </ListItem>
